@@ -1,7 +1,7 @@
 {
   "name": "ir-phone-validate",
 	"title": "IrPhoneValidator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "ir-phone-validate.js",
   "repository": {
     "type": "git",
