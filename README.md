@@ -11,7 +11,7 @@ A number such as `+۹۸۹۱۲۳۴۵۶۷۸۹` is also parsed into integer.
 ----
 To use with NodeJS either copy the source `ir-phone-validate.js` into your project or through `npm`:
 ```sh
-npm i --save ir-phone-validate
+npm install @auro0xdevel/ir-phone-validate
 ```
 
 And use:
