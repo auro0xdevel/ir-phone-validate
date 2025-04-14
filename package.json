@@ -14,5 +14,8 @@
   },
   "homepage": "https://github.com/auro0xdevel/ir-phone-validate#README.md",
   "description": "A library for parsing Iran phone numbers.",
-	"type": "module"
+	"type": "module",
+	"publishConfig": {
+  	"@auro0xdevel:registry": "https://npm.pkg.github.com"
+	}
 }
