@@ -2,14 +2,15 @@
 #include <emscripten/emscripten.h>
 #include <math.h>
 #include <stdint.h>
-#include <stdio.h>
 
 utf8_int32_t codepointToDecimal(utf8_int32_t codepoint) {
   if (0x6EF < codepoint && 0x6FA > codepoint) {
     return codepoint - 0x6F0;
   } else if (0x65A < codepoint && 0x66A > codepoint) {
-    return codepoint - 0x6C0;
-  }
+    return codepoint - 0x660;
+  } else if( 0x2F < codepoint && 0x3A > codepoint) {
+		return codepoint - 0x30;
+	}
   return codepoint;
 }
 
