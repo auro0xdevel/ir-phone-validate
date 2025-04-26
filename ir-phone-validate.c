@@ -2,15 +2,16 @@
 #include <emscripten/emscripten.h>
 #include <math.h>
 #include <stdint.h>
+#include <stdio.h>
 
 utf8_int32_t codepointToDecimal(utf8_int32_t codepoint) {
   if (0x6EF < codepoint && 0x6FA > codepoint) {
     return codepoint - 0x6F0;
   } else if (0x65A < codepoint && 0x66A > codepoint) {
     return codepoint - 0x660;
-  } else if( 0x2F < codepoint && 0x3A > codepoint) {
-		return codepoint - 0x30;
-	}
+  } else if (0x2F < codepoint && 0x3A > codepoint) {
+    return codepoint - 0x30;
+  }
   return codepoint;
 }
 
@@ -64,7 +65,7 @@ uint64_t valid(const char *phone) {
 
   uint8_t i = 0;
   uint64_t returnValue = 9000000000;
-  while ((*phoneParser) && (9 > i)) {
+  while (9 > i) {
     if (!is_number(codepoint)) {
       return 0;
     }
@@ -75,7 +76,7 @@ uint64_t valid(const char *phone) {
   }
   ADVANCE;
 
-  if ((8 != i) || 0 != codepoint) {
+  if ((9 != i)) {
     return 0;
   }
 

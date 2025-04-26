@@ -4,4 +4,5 @@
 # ignore cmake build
 /build/
 
-
+# ignore node modules please
+node_modules/
